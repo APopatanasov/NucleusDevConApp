@@ -8,59 +8,6 @@ public static class Database
 
     static Database()
     {
-        
-//         [1:55 PM] Aleksandar Hitrov
-
-// {
-
-//   "description": "<br>Attend this session to hear a case study with tips for migrating to .NET Core, to learn how our decoupled architecture enables you to build and deliver next-gen digital experiences.",
-
-//   "title": "Why You Should Build Your Next Sitefinity Project on .NET Core",
-
-//   "map": "https://hurstcc.com/wp-content/uploads/2016/06/HCCOnline_Floorplan-1.jpg",
-
-//   "imageUrl": "https://d117h1jjiq768j.cloudfront.net/images/default-source/default-album/dxpvscms_webinar_300x225_3.png",
-
-//   "info": "The session will be held by Megan Smith in Eternity Hall. Here is a map that will help you get to the hall:"
-
-// }
-
-
-
-// [1:55 PM] Aleksandar Hitrov
-
-// {
-
-//   "description": "<br>In this session, you'll learn the specifics of how to create personas and journey maps and also what tools and resources will help you get this done quickly. ",
-
-//   "title": "Pro Tips for Building Personas and Journey Maps",
-
-//   "map": "<mapUrl>",
-
-//   "imageUrl": "https://d117h1jjiq768j.cloudfront.net/images/default-source/default-album/sf_webinar_analytics_final_300x225.png",
-
-//   "info": "The session will be held by Megan Smith in Eternity Hall. Here is a map that will help you get to the hall:"
-
-// }
-
-
-
-// [1:55 PM] Aleksandar Hitrov
-
-// {
-
-//   "description": "<br>Learn the key requirements and milestones to help health care providers create and orchestrate compliant, patient-centric digital journeys.",
-
-//   "title": "Workshop: Optimize Your Online Patient Experiences",
-
-//   "map": "https://hurstcc.com/wp-content/uploads/2016/06/HCCOnline_Floorplan-1-650x632.jpg",
-
-//   "imageUrl": "https://d117h1jjiq768j.cloudfront.net/images/default-source/lectors/sitefinity--healthcaredx_300x225.png",
-
-//   "info": "The session will be held by Megan Smith in Eternity Hall. Here is a map that will help you get to the hall:"
-
-// }
-
         Speakers = new List<Speaker>
         {
             new Speaker
@@ -96,6 +43,8 @@ public static class Database
                 Speaker = Speakers[0],
                 StartTime = new DateTime(2022, 5, 8, 9, 0, 0),
                 EndTime = new DateTime(2022, 10, 8, 10, 0, 0),
+                Image = "session1.png",
+                Map = "map1.jpeg"
             },
             new Session
             {
@@ -105,6 +54,8 @@ public static class Database
                 Speaker = Speakers[1],
                 StartTime = new DateTime(2022, 5, 9, 9, 0, 0),
                 EndTime = new DateTime(2022, 10, 9, 10, 0, 0),
+                Image = "session1.png",
+                Map = "map1.jpeg"
             },
             new Session
             {
@@ -114,6 +65,8 @@ public static class Database
                 Speaker = Speakers[2],
                 StartTime = new DateTime(2022, 5, 8, 10, 0, 0),
                 EndTime = new DateTime(2022, 10, 8, 11, 0, 0),
+                Image = "session1.png",
+                Map = "map1.jpeg"
             },
             new Session
             {
@@ -123,6 +76,8 @@ public static class Database
                 Speaker = Speakers[2],
                 StartTime = new DateTime(2022, 5, 8, 15, 0, 0),
                 EndTime = new DateTime(2022, 10, 8, 16, 0, 0),
+                Image = "session2.png",
+                Map = "map1.jpeg"
             },
             new Session
             {
@@ -132,6 +87,8 @@ public static class Database
                 Speaker = Speakers[2],
                 StartTime = new DateTime(2022, 5, 8, 16, 0, 0),
                 EndTime = new DateTime(2022, 10, 8, 17, 0, 0),
+                Image = "session3.png",
+                Map = "map1.jpeg"
             },
         };
     }

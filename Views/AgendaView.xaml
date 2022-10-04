@@ -68,6 +68,9 @@
                         <telerik:ListViewTemplateCell.View>
                             <Grid RowDefinitions="Auto, Auto, Auto"
                                   Padding="10">
+                                <Grid.GestureRecognizers>
+                                     <TapGestureRecognizer Tapped="OnSessionTapped"/>
+                                </Grid.GestureRecognizers>
                                 <Label Text="{Binding Id, StringFormat='#{0}'}"
                                        FontSize="18"
                                        HorizontalOptions="End"
