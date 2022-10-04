@@ -10,6 +10,7 @@
                     <![CDATA[
                     <html>
                     <head>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     </head>
                     <body id="chatbody">
                         <script src="https://web-chat.nativechat.com/3.3.1/sdk/nativechat.js"></script>
