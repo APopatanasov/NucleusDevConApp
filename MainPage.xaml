@@ -34,8 +34,9 @@
                     </VisualState>
                     <VisualState Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="#512CD4" />
-                            <Setter Property="telerik:TabViewHeaderItem.BorderColor" Value="#512CD4" />
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="{x:Static Application.AccentColor}" />
+                            <Setter Property="telerik:TabViewHeaderItem.FontSize" Value="15"/>
+                            <Setter Property="telerik:TabViewHeaderItem.BorderColor" Value="{x:Static Application.AccentColor}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
