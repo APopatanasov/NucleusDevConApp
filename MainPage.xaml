@@ -57,12 +57,12 @@
                              HeaderText="Agenda" >
             <local:AgendaView/>
         </telerik:TabViewItem>
-        <telerik:TabViewItem ImageSource="star.png"
-                             HeaderText="Sponsors">
-        </telerik:TabViewItem>
         <telerik:TabViewItem ImageSource="bullhorn.png"
                              HeaderText="Speakers">
             <local:SpeakersView/>
+        </telerik:TabViewItem>
+        <telerik:TabViewItem ImageSource="message.png"
+                             HeaderText="Chat">
         </telerik:TabViewItem>
     </telerik:RadTabView>
 </ContentPage>
