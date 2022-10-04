@@ -59,6 +59,9 @@
                                            BorderWidth="1"
                                            BorderLocation="All" />
             </telerik:RadListView.ItemStyle>
+            <telerik:RadListView.LayoutDefinition>
+                <telerik:ListViewLinearLayout VerticalItemSpacing="10" />
+            </telerik:RadListView.LayoutDefinition>
             <telerik:RadListView.ItemTemplate>
                 <DataTemplate>
                     <telerik:ListViewTemplateCell>
