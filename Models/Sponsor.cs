@@ -1,3 +1,5 @@
+namespace NucleusDevConApp;
+
 public class Sponsor
 {
     public string Id { get; set; }
