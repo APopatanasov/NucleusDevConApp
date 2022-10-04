@@ -63,6 +63,7 @@
         </telerik:TabViewItem>
         <telerik:TabViewItem ImageSource="message.png"
                              HeaderText="Chat">
+            <local:ChatView/>
         </telerik:TabViewItem>
     </telerik:RadTabView>
 </ContentPage>

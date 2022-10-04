@@ -38,31 +38,9 @@ public static class Database
             new Session
             {
                 Id = "1",
-                Name = "Introduction to .NET MAUI",
-                Description = "Learn the basics of .NET MAUI and how to build cross-platform mobile apps with it.",
-                Speaker = Speakers[0],
-                StartTime = new DateTime(2022, 5, 8, 9, 0, 0),
-                EndTime = new DateTime(2022, 10, 8, 10, 0, 0),
-                Image = "session1.png",
-                Map = "map1.jpeg"
-            },
-            new Session
-            {
-                Id = "1",
-                Name = "Let’s Make Crazy Beautiful UI With Maui",
-                Description = ".NET MAUI may have been originally considered best for building rapid prototypes, but customers have shown us time and again that the only limits to its power is your imagination. In this session we'll take 4 beautiful designs and demonstrate the techniques used to create them. We'll cover layout, styling, bindings, animations, behaviors, drawing, and more.",
-                Speaker = Speakers[1],
-                StartTime = new DateTime(2022, 5, 9, 9, 0, 0),
-                EndTime = new DateTime(2022, 10, 9, 10, 0, 0),
-                Image = "session1.png",
-                Map = "map1.jpeg"
-            },
-            new Session
-            {
-                Id = "2",
                 Name = "Why You Should Build Your Next Sitefinity Project on .NET Core",
                 Description = "Attend this session to hear a case study with tips for migrating to .NET Core, to learn how our decoupled architecture enables you to build and deliver next-gen digital experiences.",
-                Speaker = Speakers[2],
+                Speaker = Speakers[0],
                 StartTime = new DateTime(2022, 5, 8, 10, 0, 0),
                 EndTime = new DateTime(2022, 10, 8, 11, 0, 0),
                 Image = "session1.png",
@@ -70,18 +48,18 @@ public static class Database
             },
             new Session
             {
-                Id = "3",
+                Id = "1",
                 Name = "Pro Tips for Building Personas and Journey Mapsh",
                 Description = "In this session, you'll learn the specifics of how to create personas and journey maps and also what tools and resources will help you get this done quickly.",
-                Speaker = Speakers[2],
-                StartTime = new DateTime(2022, 5, 8, 15, 0, 0),
-                EndTime = new DateTime(2022, 10, 8, 16, 0, 0),
+                Speaker = Speakers[1],
+                StartTime = new DateTime(2022, 5, 9, 9, 0, 0),
+                EndTime = new DateTime(2022, 10, 9, 10, 0, 0),
                 Image = "session2.png",
                 Map = "map1.jpeg"
             },
             new Session
             {
-                Id = "4",
+                Id = "2",
                 Name = "Workshop: Optimize Your Online Patient Experiences",
                 Description = "Learn the key requirements and milestones to help health care providers create and orchestrate compliant, patient-centric digital journeys.",
                 Speaker = Speakers[2],

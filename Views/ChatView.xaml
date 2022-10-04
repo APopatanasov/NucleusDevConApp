@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NucleusDevConApp"
+             x:Class="NucleusDevConApp.ChatView">
+    <WebView>
+        <WebView.Source>
+            <HtmlWebViewSource>
+                <HtmlWebViewSource.Html>
+                    <![CDATA[
+                    <html>
+                    <head>
+                    </head>
+                    <body id="chatbody">
+                        <script src="https://web-chat.nativechat.com/3.3.1/sdk/nativechat.js"></script>
+                            <link href="https://web-chat.nativechat.com/3.3.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
+                            <script>
+                        var chatSettings = {
+                            bot: {
+                            id: "572a7bd851324d5f842a1b4a"
+                            },
+                            channel: {
+                            id: "47f46852-08cd-450e-8859-b8ee976b4d85",
+                            token: "e357bd76-d1f9-4ac2-bc8a-a286e8dac31b"
+                            },
+                            googleApiKey: "your-google-maps-API-key",
+                            session: {
+                            clear: true
+                            }
+                        };
+                        window.NativeChat.load({
+                            id: "kcChatWindow",
+                            origin: "",
+                            display: {
+                                mode: "inline",
+                                containerId: "chatbody"
+                            },
+                            chat: chatSettings
+                        });
+                        </script>
+                    </body>
+                    </html>                    
+                    ]]>
+                </HtmlWebViewSource.Html>
+            </HtmlWebViewSource>
+        </WebView.Source>
+    </WebView>
+</ContentView>
