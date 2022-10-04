@@ -62,6 +62,7 @@
         </telerik:TabViewItem>
         <telerik:TabViewItem ImageSource="bullhorn.png"
                              HeaderText="Speakers">
+            <local:SpeakersView/>
         </telerik:TabViewItem>
     </telerik:RadTabView>
 </ContentPage>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             xmlns:local="clr-namespace:NucleusDevConApp"
+             x:Class="NucleusDevConApp.SpeakersView">
+    <Grid RowDefinitions="Auto, *"
+          BackgroundColor="#0D000000">
+        <Grid BackgroundColor="{x:Static Application.AccentColor}"
+              HeightRequest="65">
+              <Label Text="Speakers"
+                     HorizontalTextAlignment="Center"
+                     VerticalTextAlignment="Center"
+                     FontSize="19"
+                     TextColor="White"/>
+        </Grid>
+        <CarouselView Grid.Row="1"
+                      Loop="False"
+                      PeekAreaInsets="50"
+                      HeightRequest="350"
+                      HorizontalScrollBarVisibility="Never"
+                      VerticalOptions="Center"
+                      ItemsSource="{x:Static local:Database.Speakers}">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="15" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <telerik:RadBorder CornerRadius="15"
+                                       BorderThickness="2"
+                                       VerticalOptions="Start"
+                                       BackgroundColor="White"
+                                       BorderColor="{x:Static Application.AccentColor}">
+                        <Grid RowDefinitions="Auto, Auto, Auto"
+                              Padding="15">
+                            <Image Source="{Binding Image}"
+                                   WidthRequest="124"
+                                   HeightRequest="124"
+                                   Margin="15, 0, 0, 5"/>
+                            <Label Grid.Row="1"
+                                   Text="{Binding Name}"
+                                   FontSize="18"
+                                   HorizontalTextAlignment="Center"
+                                   Margin="10, 0, 0, 20"
+                                   FontAttributes="Bold"
+                                   TextColor="{x:Static Application.AccentColor}"/>
+                            <Label Grid.Row="2"
+                                   Text="{Binding Bio}"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="14"
+                                   TextColor="#99000000"/>
+                        </Grid>
+                    </telerik:RadBorder>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </Grid>
+</ContentView>
