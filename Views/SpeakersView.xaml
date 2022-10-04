@@ -14,46 +14,52 @@
                      FontSize="19"
                      TextColor="White"/>
         </Grid>
-        <CarouselView Grid.Row="1"
-                      Loop="False"
-                      PeekAreaInsets="50"
-                      HeightRequest="350"
-                      HorizontalScrollBarVisibility="Never"
-                      VerticalOptions="Center"
-                      ItemsSource="{x:Static local:Database.Speakers}">
-            <CarouselView.ItemsLayout>
-                <LinearItemsLayout Orientation="Horizontal"
-                                   ItemSpacing="15" />
-            </CarouselView.ItemsLayout>
-            <CarouselView.ItemTemplate>
+        <telerik:RadListView Grid.Row="1"
+                             VerticalOptions="Center"
+                             HeightRequest="350"
+                             Margin="10, 0, 10, 0"
+                             SelectionMode="None"
+                             ItemsSource="{x:Static local:Database.Speakers}">
+           <telerik:RadListView.ItemStyle>
+                <telerik:ListViewItemStyle BackgroundColor="Transparent"/>
+           </telerik:RadListView.ItemStyle>
+           <telerik:RadListView.LayoutDefinition>
+                <telerik:ListViewLinearLayout Orientation="Horizontal"
+                                              HorizontalItemSpacing="25"
+                                              ItemLength="250"/>
+            </telerik:RadListView.LayoutDefinition>
+            <telerik:RadListView.ItemTemplate>
                 <DataTemplate>
-                    <telerik:RadBorder CornerRadius="15"
-                                       BorderThickness="2"
-                                       VerticalOptions="Start"
-                                       BackgroundColor="White"
-                                       BorderColor="{x:Static Application.AccentColor}">
-                        <Grid RowDefinitions="Auto, Auto, Auto"
-                              Padding="15">
-                            <Image Source="{Binding Image}"
-                                   WidthRequest="124"
-                                   HeightRequest="124"
-                                   Margin="15, 0, 0, 5"/>
-                            <Label Grid.Row="1"
-                                   Text="{Binding Name}"
-                                   FontSize="18"
-                                   HorizontalTextAlignment="Center"
-                                   Margin="10, 0, 0, 20"
-                                   FontAttributes="Bold"
-                                   TextColor="{x:Static Application.AccentColor}"/>
-                            <Label Grid.Row="2"
-                                   Text="{Binding Bio}"
-                                   HorizontalTextAlignment="Center"
-                                   FontSize="14"
-                                   TextColor="#99000000"/>
-                        </Grid>
-                    </telerik:RadBorder>
+                    <telerik:ListViewTemplateCell>
+                        <telerik:ListViewTemplateCell.View>
+                            <telerik:RadBorder CornerRadius="15"
+                                               BorderThickness="2"
+                                               BackgroundColor="White"
+                                               BorderColor="{x:Static Application.AccentColor}">
+                                <Grid RowDefinitions="Auto, Auto, Auto"
+                                      Padding="15">
+                                    <Image Source="{Binding Image}"
+                                           WidthRequest="124"
+                                           HeightRequest="124"
+                                           Margin="15, 0, 0, 5"/>
+                                    <Label Grid.Row="1"
+                                           Text="{Binding Name}"
+                                           FontSize="18"
+                                           HorizontalTextAlignment="Center"
+                                           Margin="10, 0, 0, 20"
+                                           FontAttributes="Bold"
+                                           TextColor="{x:Static Application.AccentColor}"/>
+                                    <Label Grid.Row="2"
+                                           Text="{Binding Bio}"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="14"
+                                           TextColor="#99000000"/>
+                                </Grid>
+                            </telerik:RadBorder>
+                        </telerik:ListViewTemplateCell.View>
+                    </telerik:ListViewTemplateCell>
                 </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
+            </telerik:RadListView.ItemTemplate>
+        </telerik:RadListView>
     </Grid>
 </ContentView>
