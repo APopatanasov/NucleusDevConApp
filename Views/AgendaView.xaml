@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             xmlns:local="clr-namespace:NucleusDevConApp"
+             x:Class="NucleusDevConApp.AgendaView">
+    <Grid RowDefinitions="Auto, Auto, *">
+        <Grid.BindingContext>
+            <local:AgendaViewModel />
+        </Grid.BindingContext>
+        <Grid BackgroundColor="{x:Static Application.AccentColor}"
+              HeightRequest="65">
+            <VerticalStackLayout VerticalOptions="Center">
+                <Label Text="Nucleus DevCon 22"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="19"
+                    TextColor="White"/>
+                <Label Text="May 8 - 9"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="14"
+                    TextColor="#99FFFFFF"/>
+            </VerticalStackLayout>
+        </Grid>
+        <telerik:RadSegmentedControl x:Name="segmentControl"
+                                     Grid.Row="1"
+                                     SelectedIndex="{Binding SelectedDay, Mode=TwoWay}"
+                                     Margin="10"
+                                     HeightRequest="50"
+                                     SegmentBackgroundColor="#FFFFFF"
+                                     SegmentTextColor="#99000000"
+                                     SelectedSegmentBackgroundColor="{x:Static Application.AccentColor}"
+                                     SelectedSegmentTextColor="White"
+                                     VerticalOptions="Start">
+            <telerik:RadSegmentedControl.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1st day</x:String>
+                    <x:String>2nd day</x:String>
+                </x:Array>
+            </telerik:RadSegmentedControl.ItemsSource>
+        </telerik:RadSegmentedControl>
+    </Grid>
+</ContentView>

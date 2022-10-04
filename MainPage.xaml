@@ -2,12 +2,48 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui" 
+             xmlns:local="clr-namespace:NucleusDevConApp"
              x:Class="NucleusDevConApp.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
+            <VisualStateGroupList x:Key="TabViewHeaderItem_VisualStates_iOS">
+                <VisualStateGroup Name="CommonStates">
+                    <VisualState Name="Normal" />
+                    <VisualState Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="#61000000" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="{x:Static Application.AccentColor}" />
+                            <Setter Property="telerik:TabViewHeaderItem.FontSize" Value="15"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+            <VisualStateGroupList x:Key="TabViewHeaderItem_VisualStates_Android">
+                <VisualStateGroup Name="CommonStates">
+                    <VisualState Name="Normal" />
+                    <VisualState Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="#61000000" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="#512CD4" />
+                            <Setter Property="telerik:TabViewHeaderItem.BorderColor" Value="#512CD4" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
             <Style x:Key="HeaderStyle" TargetType="telerik:TabViewHeaderItem">
                 <Setter Property="ImageWidth" Value="24"/>
                 <Setter Property="ImageHeight" Value="24"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="VisualStateManager.VisualStateGroups" Value="{OnPlatform Android={StaticResource TabViewHeaderItem_VisualStates_Android}, iOS={StaticResource TabViewHeaderItem_VisualStates_iOS}}" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -15,7 +51,8 @@
                         HeaderPosition="Bottom"
                         HeaderItemStyle="{StaticResource HeaderStyle}">
         <telerik:TabViewItem ImageSource="calendar.png" 
-                             HeaderText="Agenda">
+                             HeaderText="Agenda" >
+            <local:AgendaView/>
         </telerik:TabViewItem>
         <telerik:TabViewItem ImageSource="star.png"
                              HeaderText="Sponsors">
