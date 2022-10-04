@@ -1,5 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui" 
              x:Class="NucleusDevConApp.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderStyle" TargetType="telerik:TabViewHeaderItem">
+                <Setter Property="ImageWidth" Value="24"/>
+                <Setter Property="ImageHeight" Value="24"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <telerik:RadTabView x:Name="tabView"
+                        HeaderPosition="Bottom"
+                        HeaderItemStyle="{StaticResource HeaderStyle}">
+        <telerik:TabViewItem ImageSource="calendar.png" 
+                             HeaderText="Agenda">
+        </telerik:TabViewItem>
+        <telerik:TabViewItem ImageSource="star.png"
+                             HeaderText="Sponsors">
+        </telerik:TabViewItem>
+        <telerik:TabViewItem ImageSource="bullhorn.png"
+                             HeaderText="Speakers">
+        </telerik:TabViewItem>
+    </telerik:RadTabView>
 </ContentPage>
