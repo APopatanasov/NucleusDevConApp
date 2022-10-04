@@ -36,7 +36,7 @@
             </VerticalStackLayout>
             <telerik:RadBorder Grid.Row="2"
                                CornerRadius="8"
-                               Margin="8"
+                               Margin="12"
                                BackgroundColor="White">
                 <VerticalStackLayout Padding="10">
                     <Label Text="Brief Description"
@@ -49,7 +49,7 @@
                     <Label Text="Date and Time"
                            FontSize="14"
                            TextColor="{x:Static Application.AccentColor}"/>
-                    <Label Text="{Binding StartTime, StringFormat='{}{0:ddd dd, MMM YYYY, @ hh\\:mm tt}'}"
+                    <Label Text="{Binding StartTime, StringFormat='{}{0:ddd dd, MMM yyyy, @ hh\\:mm tt}'}"
                            FontSize="14"
                            TextColor="#99000000"
                            Margin="0, 0, 0, 20"/>

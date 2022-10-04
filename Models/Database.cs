@@ -15,14 +15,14 @@ public static class Database
                 Id = "1",
                 Name = "John Smith",
                 Bio = "John is a Microsoft MVP and a .NET MAUI Certified Mobile Developer. He is a software developer at Telerik and has been working with Xamarin and .NET MAUI since 2014.",
-                Image = "person_1.png"
+                Image = "person_2.png"
             },
             new Speaker
             {
                 Id = "2",
                 Name = "David Ortinau",
                 Bio = "David is a Principal Product Manager for .NET at Microsoft, focused on .NET MAUI. A .NET developer since 2002, and versed in a range of programming languages, David has developed web, environmental, and mobile experiences for a wide variety of industries.",
-                Image = "person_2.png"
+                Image = "person_6.png"
             },
             new Speaker
             {
