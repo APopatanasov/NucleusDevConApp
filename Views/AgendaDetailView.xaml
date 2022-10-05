@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
              xmlns:local="clr-namespace:NucleusDevConApp"
-            NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="{OnPlatform Default='False', Android='True'}"
+             NavigationPage.HasBackButton="{OnPlatform Default='False', Android='True'}"
+             NavigationPage.BarBackgroundColor="Red"
+             NavigationPage.IconColor="{OnPlatform Android=White}"
              x:Class="NucleusDevConApp.AgendaDetailView">
     <ScrollView>
         <Grid RowDefinitions="Auto, Auto, Auto"
@@ -21,6 +23,7 @@
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"/>
             <ImageButton Source="chevron_left"
+                         IsVisible="{OnPlatform Default='True', Android='False'}"
                          VerticalOptions="Start"
                          HorizontalOptions="Start"
                          WidthRequest="26"
