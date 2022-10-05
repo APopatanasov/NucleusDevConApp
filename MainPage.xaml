@@ -18,7 +18,7 @@
                     </VisualState>
                     <VisualState Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="{x:Static Application.AccentColor}" />
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="{StaticResource MainFontColor}" />
                             <Setter Property="telerik:TabViewHeaderItem.FontSize" Value="15"/>
                         </VisualState.Setters>
                     </VisualState>
@@ -34,9 +34,9 @@
                     </VisualState>
                     <VisualState Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="{x:Static Application.AccentColor}" />
+                            <Setter Property="telerik:TabViewHeaderItem.TextColor" Value="{StaticResource MainFontColor}" />
                             <Setter Property="telerik:TabViewHeaderItem.FontSize" Value="15"/>
-                            <Setter Property="telerik:TabViewHeaderItem.BorderColor" Value="{x:Static Application.AccentColor}" />
+                            <Setter Property="telerik:TabViewHeaderItem.BorderColor" Value="{StaticResource MainFontColor}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -44,8 +44,9 @@
             <Style x:Key="HeaderStyle" TargetType="telerik:TabViewHeaderItem">
                 <Setter Property="ImageWidth" Value="24"/>
                 <Setter Property="ImageHeight" Value="24"/>
-                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="TextColor" Value="{StaticResource MainFontColor}"/>
                 <Setter Property="FontSize" Value="13"/>
+                <Setter Property="BackgroundColor" Value="{x:Static Application.AccentColor}"/>
                 <Setter Property="VisualStateManager.VisualStateGroups" Value="{OnPlatform Android={StaticResource TabViewHeaderItem_VisualStates_Android}, iOS={StaticResource TabViewHeaderItem_VisualStates_iOS}}" />
             </Style>
         </ResourceDictionary>

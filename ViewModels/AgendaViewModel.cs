@@ -5,8 +5,8 @@ namespace NucleusDevConApp;
 
 public class AgendaViewModel : NotifyPropertyChangedBase
 {
-    private static DateTime FistDay = new DateTime(2022, 5, 8);
-    private static DateTime SecondDay = new DateTime(2022, 5, 9);
+    private static DateTime FistDay = new DateTime(2022, 9, 11);
+    private static DateTime SecondDay = new DateTime(2022, 9, 12);
 
     private int selectedDay = 0;
     private ObservableCollection<Session> sessions;

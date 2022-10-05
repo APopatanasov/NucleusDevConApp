@@ -5,25 +5,24 @@
              xmlns:local="clr-namespace:NucleusDevConApp"
              x:Class="NucleusDevConApp.AgendaView">
     <Grid RowDefinitions="Auto, Auto, *"
-          BackgroundColor="#0D000000">
+          BackgroundColor="White">
         <Grid.BindingContext>
             <local:AgendaViewModel />
         </Grid.BindingContext>
-        <Grid BackgroundColor="{x:Static Application.AccentColor}"
-              HeightRequest="65">
-            <VerticalStackLayout VerticalOptions="Center">
-                <Label Text="Nucleus DevCon 22"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="19"
-                       TextColor="White"/>
-                <Label Text="May 8 - 9"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="14"
-                       TextColor="#99FFFFFF"/>
-            </VerticalStackLayout>
-        </Grid>
+        <Image Source="overview.jpeg" HeightRequest="150" Aspect="AspectFill"/>
+        <VerticalStackLayout VerticalOptions="Center">
+            <Label Text="Nucleus DevCon 22"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="24"
+                   TextColor="White"/>
+            <Label Text="September 11-12, 2022"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="16"
+                   TextColor="#99FFFFFF"/>
+            <Image Source="logo.png" HeightRequest="50" />
+        </VerticalStackLayout>
         <telerik:RadSegmentedControl x:Name="segmentControl"
                                      Grid.Row="1"
                                      SelectedIndex="{Binding SelectedDay, Mode=TwoWay}"
@@ -35,8 +34,8 @@
                                      SelectedSegmentTextColor="White">
             <telerik:RadSegmentedControl.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>1st day</x:String>
-                    <x:String>2nd day</x:String>
+                    <x:String>Sep 11</x:String>
+                    <x:String>Sep 12</x:String>
                 </x:Array>
             </telerik:RadSegmentedControl.ItemsSource>
         </telerik:RadSegmentedControl>
@@ -55,8 +54,7 @@
                 </DataTemplate>
             </telerik:RadListView.HeaderTemplate>
             <telerik:RadListView.ItemStyle>
-                <telerik:ListViewItemStyle BorderColor="{x:Static Application.AccentColor}"                                                
-                                           BorderWidth="1"
+                <telerik:ListViewItemStyle BorderWidth="0"
                                            BorderLocation="All" />
             </telerik:RadListView.ItemStyle>
             <telerik:RadListView.LayoutDefinition>
@@ -66,56 +64,54 @@
                 <DataTemplate>
                     <telerik:ListViewTemplateCell>
                         <telerik:ListViewTemplateCell.View>
-                            <Grid RowDefinitions="Auto, Auto, Auto"
-                                  Padding="10"
-                                  BackgroundColor="White">
-                                <Grid.GestureRecognizers>
-                                     <TapGestureRecognizer Tapped="OnSessionTapped"/>
-                                </Grid.GestureRecognizers>
-                                <Label Text="{Binding Id, StringFormat='#{0}'}"
-                                       FontSize="18"
-                                       HorizontalOptions="End"
-                                       TextColor="{x:Static Application.AccentColor}"
-                                       FontAttributes="Bold"/>
-                                <HorizontalStackLayout Spacing="6">
-                                    <Label Text="{Binding StartTime, StringFormat='{}{0:hh\\:mm tt}'}"
-                                           FontSize="14"/>
-                                    <Image Source="left_right.png"
-                                           WidthRequest="12"
-                                           HeightRequest="12"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding EndTime, StringFormat='{}{0:hh\\:mm tt}'}"
-                                           FontSize="14"/>
-                                </HorizontalStackLayout>
-                                <Label Text="{Binding Name}"
-                                       Grid.Row="1"
-                                       FontSize="19"
-                                       FontAttributes="Bold"
-                                       Margin="0, 5, 0, 15"
-                                       TextColor="{x:Static Application.AccentColor}"
-                                       VerticalTextAlignment="Center"/>
-                                <Grid Grid.Row="2"
-                                      ColumnDefinitions="Auto, *"
-                                      ColumnSpacing="8">
-                                    <Image Source="{Binding Speaker.Image}"
-                                           WidthRequest="52"
-                                           HeightRequest="52"
-                                           VerticalOptions="Start"/>
-                                    <Grid Grid.Column="1"
-                                          RowDefinitions="Auto, Auto"
-                                          RowSpacing="8">
-                                        <Label Text="{Binding Speaker.Name}"
-                                               FontSize="14"
-                                               TextColor="#CC000000"/>
-                                        <Label Grid.Row="1"
-                                               Text="{Binding Description}"
-                                               MaxLines="2"
-                                               LineBreakMode="WordWrap"
-                                               FontSize="14"
-                                               TextColor="#99000000"/>
+                            <telerik:RadBorder BorderThickness="2"
+                                               BorderColor="#E8E9ED">
+                                <Grid RowDefinitions="Auto, Auto, Auto"
+                                      Padding="10"
+                                      BackgroundColor="White">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnSessionTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Label Text="{Binding Id, StringFormat='#{0}'}"
+                                           FontSize="18"
+                                           HorizontalOptions="End"
+                                           TextColor="{x:Static Application.AccentColor}"
+                                           FontAttributes="Bold"/>
+                                    <HorizontalStackLayout Spacing="6">
+                                        <Label Text="{Binding StartTime, StringFormat='{}{0:hh\\:mm tt}'}" FontSize="14"/>
+                                        <Label Text="-" FontSize="14"/>
+                                        <Label Text="{Binding EndTime, StringFormat='{}{0:hh\\:mm tt}'}" FontSize="14"/>
+                                    </HorizontalStackLayout>
+                                    <Label Text="{Binding Name}"
+                                           Grid.Row="1"
+                                           FontSize="19"
+                                           FontAttributes="Bold"
+                                           Margin="0, 5, 0, 15"
+                                           TextColor="{x:Static Application.AccentColor}"
+                                           VerticalTextAlignment="Center"/>
+                                    <Grid Grid.Row="2"
+                                          ColumnDefinitions="Auto, *"
+                                          ColumnSpacing="8">
+                                        <Image Source="{Binding Speaker.Image}"
+                                               WidthRequest="52"
+                                               HeightRequest="52"
+                                               VerticalOptions="Start"/>
+                                        <Grid Grid.Column="1"
+                                              RowDefinitions="Auto, Auto"
+                                              RowSpacing="8">
+                                            <Label Text="{Binding Speaker.Name}"
+                                                   FontSize="14"
+                                                   TextColor="#CC000000"/>
+                                            <Label Grid.Row="1"
+                                                   Text="{Binding Description}"
+                                                   MaxLines="2"
+                                                   LineBreakMode="WordWrap"
+                                                   FontSize="14"
+                                                   TextColor="#99000000"/>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>
+                            </telerik:RadBorder>
                         </telerik:ListViewTemplateCell.View>
                     </telerik:ListViewTemplateCell>
                 </DataTemplate>
