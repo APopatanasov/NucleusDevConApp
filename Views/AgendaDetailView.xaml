@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
              xmlns:local="clr-namespace:NucleusDevConApp"
-             NavigationPage.IconColor="{OnPlatform Android=White}"
+            NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
              x:Class="NucleusDevConApp.AgendaDetailView">
     <ScrollView>
         <Grid RowDefinitions="Auto, Auto, Auto"
@@ -19,6 +20,14 @@
                    FontSize="24"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"/>
+            <ImageButton Source="chevron_left"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Start"
+                         WidthRequest="26"
+                         HeightRequest="26"
+                         Margin="5, 5, 0, 0"
+                         BackgroundColor="#33000000"
+                         Clicked="OnBackButtonClicked"/>
             <VerticalStackLayout Grid.Row="1"
                                  Margin="0, 10, 0, 10">
                 <Label Text="Presenter"

@@ -38,6 +38,7 @@
         <MauiImage Include="Resources\Images\*" />
         <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
         <MauiImage Update="Resources\Images\*.svg" TintColor="#FFFC00"/>
+        <MauiImage Update="Resources\Images\chevron_left.svg" TintColor="#FFFFFF"/>
 
         <!-- Custom Fonts -->
         <MauiFont Include="Resources\Fonts\*" />

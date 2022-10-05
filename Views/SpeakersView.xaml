@@ -4,17 +4,29 @@
              xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
              xmlns:local="clr-namespace:NucleusDevConApp"
              x:Class="NucleusDevConApp.SpeakersView">
-    <Grid RowDefinitions="Auto, *"
+    <Grid RowDefinitions="Auto, Auto, *"
           BackgroundColor="#0D000000">
-        <Grid BackgroundColor="{x:Static Application.AccentColor}"
-              HeightRequest="65">
-              <Label Text="Speakers"
-                     HorizontalTextAlignment="Center"
-                     VerticalTextAlignment="Center"
-                     FontSize="19"
-                     TextColor="White"/>
-        </Grid>
-        <telerik:RadListView Grid.Row="1"
+        <Image Source="speakers.jpeg" HeightRequest="150" Aspect="AspectFill"/>
+        <VerticalStackLayout VerticalOptions="Center"
+                             Spacing="15">
+            <Label Text="Speakers"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="24"
+                   TextColor="White"/>
+            <Label Text="Knowledge | Experience | Craftsmanship"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="16"
+                   TextColor="#99FFFFFF"/>
+        </VerticalStackLayout>
+        <Label Grid.Row="1"
+               Text="Our Speakers"
+               FontSize="24"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               Margin="0, 20, 0, 0"/>
+        <telerik:RadListView Grid.Row="2"
                              VerticalOptions="Center"
                              HeightRequest="350"
                              Margin="10, 0, 10, 0"
