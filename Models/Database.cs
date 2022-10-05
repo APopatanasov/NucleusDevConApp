@@ -14,7 +14,7 @@ public static class Database
             {
                 Id = "1",
                 Name = "John Pitt",
-                Bio = "John is a Microsoft MVP and a .NET MAUI Certified Mobile Developer. He is a software developer at Telerik and has been working with Xamarin and .NET MAUI since 2014.",
+                Bio = "John is both Microsoft and Sitefinity MVP since 2020. He is a software developer at Progress and has been working with Sitefinity and .NET MAUI since 2019.",
                 Image = "person_2.png"
             },
             new Speaker
@@ -28,7 +28,7 @@ public static class Database
             {
                 Id = "3",
                 Name = "Megan Smith",
-                Bio = "Megan is a Senior Product Manager at Telerik. She has been working with Sitefinity since 2010 and has been a Sitefinity MVP since 2013.",
+                Bio = "Megan is a Senior Product Manager at Progress. She has been working with Sitefinity since 2010 and has been a Sitefinity MVP since 2013.",
                 Image = "person_8.png"
             },
         };
@@ -49,7 +49,7 @@ public static class Database
             new Session
             {
                 Id = "1",
-                Name = "Pro Tips for Building Personas and Journey Mapsh",
+                Name = "Pro Tips for Building Personas and Journey Maps",
                 Description = "In this session, you'll learn the specifics of how to create personas and journey maps and also what tools and resources will help you get this done quickly.",
                 Speaker = Speakers[1],
                 StartTime = new DateTime(2022, 9, 11, 9, 0, 0),
