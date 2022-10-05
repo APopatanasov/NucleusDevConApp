@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+        <TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
         <OutputType>Exe</OutputType>
         <RootNamespace>NucleusDevConApp</RootNamespace>
         <UseMaui>true</UseMaui>
@@ -10,10 +9,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
 
         <!-- Display name -->
-        <ApplicationTitle>NucleusDevConApp</ApplicationTitle>
+        <ApplicationTitle>Nucleus DevCon</ApplicationTitle>
 
         <!-- App Identifier -->
-        <ApplicationId>com.companyname.nucleusdevconapp</ApplicationId>
+        <ApplicationId>com.telerik.nucleusdevconapp</ApplicationId>
         <ApplicationIdGuid>8e46032b-0a6c-4413-9850-0dcb9076e5ff</ApplicationIdGuid>
 
         <!-- Versions -->

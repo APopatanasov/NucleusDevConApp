@@ -26,14 +26,13 @@
         </Grid>
         <telerik:RadSegmentedControl x:Name="segmentControl"
                                      Grid.Row="1"
-                                     BackgroundColor="{x:Static Application.AccentColor}"
                                      SelectedIndex="{Binding SelectedDay, Mode=TwoWay}"
                                      Margin="10"
                                      HeightRequest="50"
-                                     SegmentBackgroundColor="{x:Static Application.AccentColor}"
-                                     SegmentTextColor="#FFFFFF"
-                                     SelectedSegmentBackgroundColor="White"
-                                     SelectedSegmentTextColor="#99000000">
+                                     SegmentBackgroundColor="White"
+                                     SegmentTextColor="#99000000"
+                                     SelectedSegmentBackgroundColor="{x:Static Application.AccentColor}"
+                                     SelectedSegmentTextColor="White">
             <telerik:RadSegmentedControl.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>1st day</x:String>
