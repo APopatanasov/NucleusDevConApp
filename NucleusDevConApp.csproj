@@ -9,7 +9,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
 
         <!-- Display name -->
-        <ApplicationTitle>Nucleus DevReach</ApplicationTitle>
+        <ApplicationTitle>Nucleus DevCon</ApplicationTitle>
 
         <!-- App Identifier -->
         <ApplicationId>com.telerik.nucleusdevconapp</ApplicationId>
