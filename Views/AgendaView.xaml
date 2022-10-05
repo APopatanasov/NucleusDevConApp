@@ -11,17 +11,12 @@
         </Grid.BindingContext>
         <Image Source="overview.jpeg" HeightRequest="150" Aspect="AspectFill"/>
         <VerticalStackLayout VerticalOptions="Center">
-            <Label Text="Nucleus DevReach 22"
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   FontSize="24"
-                   TextColor="White"/>
+            <Image Source="nucleus_dark.png" HeightRequest="50"/>
             <Label Text="September 11-12, 2022"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    FontSize="16"
                    TextColor="#99FFFFFF"/>
-            <Image Source="logo.png" HeightRequest="50" />
         </VerticalStackLayout>
         <telerik:RadSegmentedControl x:Name="segmentControl"
                                      Grid.Row="1"
