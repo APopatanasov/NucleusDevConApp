@@ -11,7 +11,7 @@
         </Grid.BindingContext>
         <Image Source="overview.jpeg" HeightRequest="150" Aspect="AspectFill"/>
         <VerticalStackLayout VerticalOptions="Center">
-            <Label Text="Nucleus DevCon 22"
+            <Label Text="Nucleus DevReach 22"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    FontSize="24"
